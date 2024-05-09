@@ -34,21 +34,31 @@ function RenderLandingPage(props) {
       {/* Graphs Section: Add code here for the graphs section for your first ticket */}
       <div className="graphs-section">
         <div class="grant-rates-by-office-container">
-          <img src={GrantRatesByOfficeImg} alt="Search Grant Rates By Office" />
+          <img
+            src={GrantRatesByOfficeImg}
+            alt="Search Grant Rates By Office"
+            class="gr-office-img"
+          />
           <p>Search Grant Rates By Office</p>
         </div>
         <div class="grant-rates-by-nationality-container">
           <img
             src={GrantRatesByNationalityImg}
             alt="Search Grant Rates By Nationality"
+            class="gr-nationality-img"
           />
           <p>Search Grant Rates By Nationality</p>
         </div>
         <div class="grant-rates-over-time-container">
-          <img src={GrantRatesOverTimeImg} alt="Search Grant Rates Over Time" />
+          <img
+            src={GrantRatesOverTimeImg}
+            alt="Search Grant Rates Over Time"
+            class="gr-overtime-img"
+          />
           <p>Search Grant Rates Over Time</p>
         </div>
       </div>
+      {/* Button section */}
       <div className="view-more-data-btn-container">
         <Button
           type="default"
@@ -57,15 +67,20 @@ function RenderLandingPage(props) {
         >
           View the Data
         </Button>
-        <Button
-          type="default"
-          style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
-          onClick={() => history.push('/graphs')}
-        >
-          Download the Data
-        </Button>
+        <a href="https://humanrightsfirst.org/wp-content/uploads/2022/10/COW2021001887-I589Data.csv">
+          <div class="read-more-btn">
+            <button
+              type="button"
+              class="ant-btn ant-btn-default"
+              style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
+            >
+              <span>Download the Data</span>
+            </button>
+          </div>
+        </a>
       </div>
-      {/* End of graph section */}
+      {/* End  */}
+
       <div className="middle-section">
         <div className="hrf-img-container">
           <img src={HrfPhoto} alt="Human Rights First" className="hrf-img" />
