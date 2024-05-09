@@ -33,26 +33,21 @@ function RenderLandingPage(props) {
 
       {/* Graphs Section: Add code here for the graphs section for your first ticket */}
       <div className="graphs-section">
-        <img
-          className="flex-item"
-          src={GrantRatesByOfficeImg}
-          alt="Search Grant Rates By Office"
-        />
-        <img
-          className="flex-item"
-          src={GrantRatesByNationalityImg}
-          alt="Search Grant Rates By Nationality"
-        />
-        <img
-          className="flex-item"
-          src={GrantRatesOverTimeImg}
-          alt="Search Grant Rates Over Time"
-        />
-      </div>
-      <div className="graph-text">
-        <div>Search Grant Rates By Office</div>
-        <div>Search Grant Rates By Nationality</div>
-        <div>Search Grant Rates Over Time</div>
+        <div class="grant-rates-by-office-container">
+          <img src={GrantRatesByOfficeImg} alt="Search Grant Rates By Office" />
+          <p>Search Grant Rates By Office</p>
+        </div>
+        <div class="grant-rates-by-nationality-container">
+          <img
+            src={GrantRatesByNationalityImg}
+            alt="Search Grant Rates By Nationality"
+          />
+          <p>Search Grant Rates By Nationality</p>
+        </div>
+        <div class="grant-rates-over-time-container">
+          <img src={GrantRatesOverTimeImg} alt="Search Grant Rates Over Time" />
+          <p>Search Grant Rates Over Time</p>
+        </div>
       </div>
       <div className="view-more-data-btn-container">
         <Button
@@ -70,6 +65,7 @@ function RenderLandingPage(props) {
           Download the Data
         </Button>
       </div>
+      {/* End of graph section */}
       <div className="middle-section">
         <div className="hrf-img-container">
           <img src={HrfPhoto} alt="Human Rights First" className="hrf-img" />
